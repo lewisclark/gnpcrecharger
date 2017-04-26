@@ -3,13 +3,10 @@ AddCSLuaFile("cl_init.lua")
 include("shared.lua")
 
 function ENT:Initialize()
-	self:SetModel("models/Humans/Group02/male_09.mdl")
-	self:SetHullType(HULL_HUMAN)
-	self:SetHullSizeNormal()
-	self:SetNPCState(NPC_STATE_SCRIPT)
-	self:SetSolid(SOLID_BBOX)
-	self:CapabilitiesAdd(bit.bor(CAP_ANIMATEDFACE, CAP_TURN_HEAD))
-	self:DropToFloor()
+	self:SetModel("models/props_combine/health_charger001.mdl")
+	self:SetMoveType(MOVETYPE_VPHYSICS)
+	self:SetSolid(SOLID_VPHYSICS)
+	self:PhysicsInit(SOLID_VPHYSICS)
 	self:SetUseType(CONTINUOUS_USE)
 
 	local phys = self:GetPhysicsObject()
@@ -20,7 +17,7 @@ function ENT:Initialize()
 end
 
 function ENT:Use(activator, caller)
-	if not IsValid(caller) or not IsPlayer(caller) then return end
+	if not IsValid(caller) or not caller:IsPlayer() then return end
 		
 	local walletAmt = caller:getDarkRPVar("money")
 
