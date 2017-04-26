@@ -2,8 +2,10 @@ AddCSLuaFile("shared.lua")
 AddCSLuaFile("cl_init.lua")
 include("shared.lua")
 
+local MODEL = "models/props_combine/suit_charger001.mdl"
+
 function ENT:Initialize()
-	self:SetModel("models/props_combine/suit_charger001.mdl")
+	self:SetModel(MODEL)
 	self:SetMoveType(MOVETYPE_VPHYSICS)
 	self:SetSolid(SOLID_VPHYSICS)
 	self:PhysicsInit(SOLID_VPHYSICS)
