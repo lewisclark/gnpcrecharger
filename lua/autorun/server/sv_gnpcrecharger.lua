@@ -64,6 +64,9 @@ end)
 
 hook.Add("InitPostEntity", "gNPCRecharger", function()
 	local json = file.Read("gnpcrecharger_saved.txt", false)
+
+	if not json then return end // file doesnt exist
+
 	local tblEnts = util.JSONToTable(json)
 
 	spawnRechargers(tblEnts)
