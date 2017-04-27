@@ -2,7 +2,7 @@
 
 ### **What is gNPCRecharger?**
 
-gNPCRecharger is a simple addon that can improve player's experience on your DarkRP server. It allows players to 'recharge' their health or armor for in-game money, giving players another alternative instead of killing themselves to regain their health/armor.
+gNPCRecharger is a simple addon that can improve a players experience on your DarkRP server. It allows players to 'recharge' their health or armor for in-game money, giving players another alternative instead of killing themselves to regain their health/armor.
 
 ---
 
